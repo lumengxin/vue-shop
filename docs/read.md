@@ -67,9 +67,67 @@ vue ui;
 
 #### 3. 项目托管
 
+- github 中新建vue-shop项目
+
+- 进入本地 vue-shop目录中
+
+  ```
+  // 检查本地状态
+  git status;
+  // 本地提交
+  git add *; git commit -m "init";
+  // 建立连接
+  * git remote add origin(名字随意) git@github.com:lumengxin/vue-shop.git;
+  * (没有正确权限)
+  * 解除关联 git remote rm origin, 改用http协议
+  git remote add origin https://github.com/lumengxin/vue-shop.git;
+  /* 问题：
+  git pull origin master;
+  报错 - fatal: refusing to merge unrelated histories；
+  	两个不相干库，无法合并。
+  解决：git pull origin master --allow-unrelated-histories；强行合并
+  */
+  // 推送到远程
+  git push (-u) origin master;
+  ```
+
+#### 4. 后台项目配置
+
+- 安装mysql, 使用phpStudy 集成环境。开启MySQL.
+
+- 导入数据库。vue_api_server/db/mydb.sql, 使用phpStudy 点击mysql管理器，输入密码root 选择到sql文件位置，数据库名为mydb, 执行导入。
+
+- 验证后台服务，使用Postman测试。
+
+  <img src=".\images\postman.png" alt="postman" />
+
 
 
 ### 项目开发
+
+### day01
+
+#### 1. 登录、退出功能
+
+<h5>1.1 功能概述: </h5>
+
+业务流程：
+
+- 登录页面输入用户名，密码
+- 调用后台接口验证
+- 通过验证后，根据后台响应状态跳转到主页
+
+知识点：
+
+- http是无状态的
+
+- cookie 在客户端记录状态，session在服务端记录状态（不支持跨域）
+
+- token方式维护状态。解决客户端与服务端存在跨域问题。token原理：
+
+  ![token](.\images\token.png)
+
+
 
 
 
