@@ -127,6 +127,17 @@ vue ui;
 
   ![token](.\images\token.png)
 
+<h5>1.2 登录实现</h5>
+
+新建login分支：
+
+```
+// 创建并切换分支
+git checkout -b login;
+// 查看分支
+git branch;
+```
+
 
 
 
