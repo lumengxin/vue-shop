@@ -1,5 +1,16 @@
 # vue-shop
 
+<hr />
+
+相关网站：
+
+- 图标库： [阿里矢量图](https://www.iconfont.cn/manage/index?manage_type=myprojects&projectId=1563784)
+- ui:  [element-ui](https://element.eleme.cn/#/zh-CN/component/form)
+
+<hr />
+
+
+
 ### 项目介绍
 
 #### 1. 目标

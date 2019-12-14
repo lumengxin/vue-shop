@@ -1,0 +1,23 @@
+{
+  "id": "1563784",
+  "name": "vue-shop",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "vue电商后台管理项目",
+  "glyphs": [
+    {
+      "icon_id": "7549818",
+      "name": "锁",
+      "font_class": "RectangleCopy",
+      "unicode": "e6a8",
+      "unicode_decimal": 59048
+    },
+    {
+      "icon_id": "7551131",
+      "name": "用户管理",
+      "font_class": "RectangleCopy1",
+      "unicode": "e6b0",
+      "unicode_decimal": 59056
+    }
+  ]
+}
