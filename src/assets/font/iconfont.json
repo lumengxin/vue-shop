@@ -6,6 +6,13 @@
   "description": "vue电商后台管理项目",
   "glyphs": [
     {
+      "icon_id": "4543343",
+      "name": "商品",
+      "font_class": "shangpin",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    },
+    {
       "icon_id": "7549818",
       "name": "锁",
       "font_class": "RectangleCopy",
@@ -18,6 +25,34 @@
       "font_class": "RectangleCopy1",
       "unicode": "e6b0",
       "unicode_decimal": 59056
+    },
+    {
+      "icon_id": "11183170",
+      "name": "权限管理",
+      "font_class": "permission",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "12260290",
+      "name": "MPIS-CongestionDegree",
+      "font_class": "MPIS-CongestionDegree",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "12260369",
+      "name": "MPIS-Submit",
+      "font_class": "MPIS-Submit",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "12260374",
+      "name": "MPIS-StatisticalAnalysis",
+      "font_class": "MPIS-StatisticalAnalysis",
+      "unicode": "e629",
+      "unicode_decimal": 58921
     }
   ]
 }

@@ -1,14 +1,12 @@
 # vue-shop
 
 <hr />
-
 相关网站：
 
 - 图标库： [阿里矢量图](https://www.iconfont.cn/manage/index?manage_type=myprojects&projectId=1563784)
 - ui:  [element-ui](https://element.eleme.cn/#/zh-CN/component/form)
 
 <hr />
-
 
 
 ### 项目介绍
@@ -121,7 +119,6 @@ vue ui;
 #### 1. 登录、退出功能
 
 <h5>1.1 功能概述: </h5>
-
 业务流程：
 
 - 登录页面输入用户名，密码
@@ -139,7 +136,6 @@ vue ui;
   ![token](.\images\token.png)
 
 <h5>1.2 登录实现</h5>
-
 新建login分支：
 
 ```
@@ -147,6 +143,21 @@ vue ui;
 git checkout -b login;
 // 查看分支
 git branch;
+```
+
+...
+
+##### 1.3 提交代码
+
+```
+git add *; git commit -m "登录功能";
+// 合并到master
+git checkout master;
+git merge login;
+git push origin master;
+// login 推送到远程
+git checkout login;
+git push -u origin login;
 ```
 
 
