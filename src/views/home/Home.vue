@@ -20,6 +20,7 @@
           :collapse="isCollapse"
           :collapse-transition="false"
           router
+          :default-active="activePath"
           >
           <!-- index唯一标识不同的导航栏，只接受字符串 -->
           <el-submenu :index="item.id + ''"
@@ -33,7 +34,9 @@
             </template>
             <el-menu-item :index="'/' + subItem.path"
               v-for="subItem in item.children"
-              :key="subItem.id">
+              :key="subItem.id"
+              @click="savaNavState('/' + subItem.path)"
+              >
               <template slot="title">
                 <i class="el-icon-menu"></i>
                 <span>{{subItem.authName}}</span>
@@ -44,7 +47,6 @@
       </el-aside>
       <el-main>
         <!-- welcome路由占位符 -->
-        main
         <router-view></router-view>
       </el-main>
     </el-container>
@@ -64,7 +66,8 @@ export default {
         '102': 'iconfont iconMPIS-Submit',
         '145': 'iconfont iconMPIS-StatisticalAnalysis'
       },
-      isCollapse: false
+      isCollapse: false,
+      activePath: ''
     }
   },
   methods: {
@@ -80,10 +83,16 @@ export default {
     },
     toggleCollapse() {
       this.isCollapse = !this.isCollapse
+    },
+    // 路由切换相应菜单保持高亮
+    savaNavState(activePath) {
+      window.sessionStorage.setItem('activePath', activePath)
+      this.activePath = activePath
     }
   },
   created() {
     this.getMenuList()
+    this.activePath = window.sessionStorage.getItem('activePath')
   }
 }
 </script>
