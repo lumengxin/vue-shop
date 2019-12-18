@@ -8,7 +8,10 @@ import './assets/css/global.css'
 import './assets/font/iconfont.css'
 import axios from 'axios'
 
+import './components/common.js'
+
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
+// axios.defaults.baseURL = 'http://af188131.ngrok.io/api/private/v1/'
 // 请求拦截器
 axios.interceptors.request.use(config => {
   // console.log(config)

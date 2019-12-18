@@ -8,7 +8,6 @@
 
 <hr />
 
-
 ### 项目介绍
 
 #### 1. 目标
@@ -158,6 +157,20 @@ git push origin master;
 // login 推送到远程
 git checkout login;
 git push -u origin login;
+```
+
+#### 2. 用户管理
+
+将master 中开发好的代码，转移到user分支。同步代码
+
+```
+git checkout -b user;
+git add .;
+git commit -m "用户管理";
+git push -u origin user;
+git checkout master;
+git merge user;
+git push origin master;
 ```
 
 
