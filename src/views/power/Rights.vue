@@ -1,9 +1,9 @@
 <template>
   <div class="rights">
-    <breadcrumbs>
+    <x-breadcrumbs>
       <el-breadcrumb-item>权限管理</el-breadcrumb-item>
       <el-breadcrumb-item>权限列表</el-breadcrumb-item>
-    </breadcrumbs>
+    </x-breadcrumbs>
 
     <el-card>
       <el-table :data="rightsList" border stripe>

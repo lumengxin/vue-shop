@@ -1,9 +1,9 @@
 <template>
   <div class="roles">
-    <breadcrumbs>
+    <x-breadcrumbs>
       <el-breadcrumb-item>角色管理</el-breadcrumb-item>
       <el-breadcrumb-item>角色列表</el-breadcrumb-item>
-    </breadcrumbs>
+    </x-breadcrumbs>
 
     <el-card>
       <el-row>
