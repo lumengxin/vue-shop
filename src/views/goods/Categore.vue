@@ -2,7 +2,7 @@
   <div class="categore">
     <x-breadcrumbs>
       <el-breadcrumb-item>商品管理</el-breadcrumb-item>
-      <el-breadcrumb-item>商品列表</el-breadcrumb-item>
+      <el-breadcrumb-item>商品分类</el-breadcrumb-item>
     </x-breadcrumbs>
 
     <el-card>
