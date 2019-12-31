@@ -8,7 +8,7 @@
     <el-card>
       <el-row>
         <el-col>
-          <el-button>添加角色</el-button>
+          <el-button @click="addRoles">添加角色</el-button>
         </el-col>
       </el-row>
 
@@ -109,6 +109,8 @@
 </template>
 
 <script>
+import { addRole } from '../../server/business/power'
+
 export default {
   name: 'Roles',
   data() {
@@ -209,6 +211,17 @@ export default {
       this.$message.success('分配权限成功')
       this.getRolesList()
       this.setRightDialogVisible = false
+    },
+    /* 自定义接口 */
+    addRoles() {
+      addRole({
+        roleName: 'admin2',
+        roleDesc: 'admin2'
+      }).then(res => {
+        console.log(res)
+      }).catch(err => {
+        console.log(err)
+      })
     }
   },
   created() {
