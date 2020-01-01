@@ -7,7 +7,6 @@
 - ui:  [element-ui](https://element.eleme.cn/#/zh-CN/component/form)
 
 <hr />
-
 ### 项目介绍
 
 #### 1. 目标
@@ -173,9 +172,19 @@ git merge user;
 git push origin master;
 ```
 
+.......
 
 
 
+### 项目优化
 
-### 项目打包
+#### 1.项目优化策略
+
+- 生成打包报告
+- 第三库启用CDN
+- Element-UI等组件按需加载
+- 路由懒加载
+- 首页内容定制
+
+
 
