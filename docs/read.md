@@ -193,5 +193,10 @@ git push origin master;
 
 ![优化前](.\images\优化前.png)
 
-优化后：
+优化后(externals)：
 
+![](.\images\优化后png.png)
+
+element, CDN加载：
+
+![](.\images\优化el.png)
