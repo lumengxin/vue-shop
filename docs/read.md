@@ -187,6 +187,8 @@ git push origin master;
 - 第三库启用CDN
 - Element-UI等组件按需加载
 - 路由懒加载
+  - 安装@babel/plugin-syntax-dynamic-impot包 - 配置 - 改变路由加载形式
+
 - 首页内容定制
 
 优化前：
@@ -200,3 +202,30 @@ git push origin master;
 element, CDN加载：
 
 ![](.\images\优化el.png)
+
+
+
+### 项目上线
+
+#### 1.相关配置
+
+- 通过node创建web服务器
+
+创建node项目，安装express。通过express快速创建web服务器，将vue打包生成的dist文件夹托管为静态资源即可，代码：
+
+```
+const express = require('express')
+const app = express()
+
+app.use(express.static('./dist'))
+
+app.listen(80, () => {
+	console.log('web server running at http://127.0.0.1')
+})
+```
+
+
+
+- 开启gzip配置
+- 配置https服务
+- 使用pm2管理应用

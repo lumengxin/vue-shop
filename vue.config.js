@@ -33,7 +33,7 @@ module.exports = {
       */
       config.set('externals', {
         vue: 'Vue',
-        'vue-roter': 'VueRouter',
+        'vue-router': 'VueRouter',
         axios: 'axios',
         lodash: '_',
         echarts: 'echarts',
