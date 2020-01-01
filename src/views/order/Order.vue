@@ -13,11 +13,12 @@
             clearable
             >
             <el-button slot="append" icon="el-icon-search"
+              @click="getOrderList"
               ></el-button>
           </el-input>
         </el-col>
         <el-col :span="4">
-          <el-button type="primary">添加商品</el-button>
+          <el-button type="primary">添加订单</el-button>
         </el-col>
       </el-row>
 

@@ -32,9 +32,13 @@
           <el-tag type="success" size="mini" v-else-if="scope.row.cat_level === 1">二级</el-tag>
           <el-tag type="warning" size="mini" v-else>三级</el-tag>
         </template>
-        <template slot="opt">
-          <el-button type="primary" icon="el-icon-edit" size="mini">编辑</el-button>
-          <el-button type="danger" icon="el-icon-delete" size="mini">删除</el-button>
+        <template slot="opt" slot-scope="scope">
+          <el-button type="primary" icon="el-icon-edit" size="mini"
+            @click="editCategore(scope.row.cat_id)"
+            >编辑</el-button>
+          <el-button type="danger" icon="el-icon-delete" size="mini"
+            @click="deleteCategore(scope.row.cat_id)"
+            >删除</el-button>
         </template>
       </tree-table>
       <el-pagination @size-change="handleSizeChange"
@@ -80,6 +84,8 @@
 </template>
 
 <script>
+import { getGoodsCategorieInfoById, deleteGoodsCategorieInfoById } from '../../server/business/goods'
+
 export default {
   name: 'Categore',
   data() {
@@ -195,6 +201,24 @@ export default {
       this.selectedKeys = []
       this.addCateForm.cat_level = 0
       this.addCateForm.cat_pid = 0
+    },
+    getCategoreInfo(id) {
+      getGoodsCategorieInfoById(id).then(res => {
+        console.log(res)
+      })
+    },
+    editCategore(id) {
+      this.getCategoreInfo(id)
+    },
+    deleteCategore(id) {
+      deleteGoodsCategorieInfoById(id).then(res => {
+        if (res.meta.status === 200) {
+          this.$message.success('删除商品成功')
+        } else {
+          this.$message.error('删除商品失败')
+        }
+      })
+      this.getCateList()
     }
   },
   created() {
