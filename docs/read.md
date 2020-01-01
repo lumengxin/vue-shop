@@ -181,10 +181,17 @@ git push origin master;
 #### 1.项目优化策略
 
 - 生成打包报告
+  - 命令行参数：vue-cli-service build --report
+  - 可视化ui面板
+
 - 第三库启用CDN
 - Element-UI等组件按需加载
 - 路由懒加载
 - 首页内容定制
 
+优化前：
 
+![优化前](.\images\优化前.png)
+
+优化后：
 

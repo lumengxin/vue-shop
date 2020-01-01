@@ -1,5 +1,6 @@
 'use strict'
 
+// https://cli.vuejs.org/zh/config/#vue-config.js
 module.exports = {
   // 是否hash值
   filenameHashing: false,
@@ -10,12 +11,21 @@ module.exports = {
     host: '127.0.0.1',
     port: 8889,
     https: false,
-    open: true,
-    proxy: {
-      '/api': {
-        target: 'http://127.0.0.1:8888/api/private/v1/',
-        changeOrigin: true
-      }
-    }
+    open: true
+    // proxy: {
+    //   '/api': {
+    //     target: 'http://127.0.0.1:8888/api/private/v1/',
+    //     changeOrigin: true
+    //   }
+    // }
+  },
+  // 通过chainWebpack自定义打包入口
+  chainWebpack: config => {
+    config.when(process.env.NODE_ENV === 'production', config => {
+      config.entry('app').clear().add('./src/main-prod.js')
+    })
+    config.when(process.env.NODE_ENV === 'development', config => {
+      config.entry('app').clear().add('./src/main-dev.js')
+    })
   }
 }
