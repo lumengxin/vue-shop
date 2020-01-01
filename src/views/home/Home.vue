@@ -3,7 +3,7 @@
     <el-header>
       <div>
         <img src="../../assets/logo.png" width="50" height="50" alt />
-        <span>电商后台管理系统</span>
+        <span>新乡村农贸电商后台管理系统</span>
       </div>
       <el-button type="info" @click="logout">退出</el-button>
     </el-header>
@@ -60,7 +60,7 @@ export default {
     return {
       menuList: [],
       iconsObj: {
-        '125': 'iconfont iconMPIS-CongestionDegree',
+        '125': 'iconfont iconyonghu',
         '103': 'iconfont iconpermission',
         '101': 'iconfont iconshangpin',
         '102': 'iconfont iconMPIS-Submit',

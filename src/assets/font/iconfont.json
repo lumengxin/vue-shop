@@ -6,6 +6,13 @@
   "description": "vue电商后台管理项目",
   "glyphs": [
     {
+      "icon_id": "4100135",
+      "name": "用户",
+      "font_class": "yonghu",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
       "icon_id": "4543343",
       "name": "商品",
       "font_class": "shangpin",
@@ -20,25 +27,11 @@
       "unicode_decimal": 59048
     },
     {
-      "icon_id": "7551131",
-      "name": "用户管理",
-      "font_class": "RectangleCopy1",
-      "unicode": "e6b0",
-      "unicode_decimal": 59056
-    },
-    {
       "icon_id": "11183170",
       "name": "权限管理",
       "font_class": "permission",
       "unicode": "e600",
       "unicode_decimal": 58880
-    },
-    {
-      "icon_id": "12260290",
-      "name": "MPIS-CongestionDegree",
-      "font_class": "MPIS-CongestionDegree",
-      "unicode": "e61e",
-      "unicode_decimal": 58910
     },
     {
       "icon_id": "12260369",
