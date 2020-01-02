@@ -224,8 +224,45 @@ app.listen(80, () => {
 })
 ```
 
-
-
 - 开启gzip配置
+
+使用gzip可以减小文件体积，使得传输速度更快。
+
+```
+npm install compression -D;
+
+const compression = require('compression')
+app.use(compression())
+```
+
+
+
 - 配置https服务
+
+ 传统HTTP协议传输的数据都是明文，不安全。HTTPS协议对数据进行了加密处理，可以防止被中间人窃取，更安全。
+
+申请SSL证书：https://freessl.org    https://freessl.cn -> 免费。申请好证书，复制到项目根目录。
+
+配置HTTPS服务（后台项目中导入证书）
+
+```
+const https = require('http')
+const fs = require('fs')
+const options = {
+	cert: fs.readFileSync('./full_chain.pem')
+	key: fs.readFileSync('./private.key')
+}
+https.createServer(options, app).listen(443)
+```
+
+
+
 - 使用pm2管理应用
+
+  关闭终端，项目依然可以在后台运行。
+
+  - 服务器上安装pm2: npm i pm2 -g
+  - 启动项目：pm2 start 脚本 --name 自定义名称
+  - 查看运行项目：pm2 ls
+  - 停止：pm2 stop 自定义名称（或者 id）
+  - 删除：pm2 delete 自定义名称
