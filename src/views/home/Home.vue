@@ -46,7 +46,7 @@
         </el-menu>
       </el-aside>
       <el-main>
-        <!-- welcome路由占位符 -->
+        <!-- home子组件路由占位符 -->
         <router-view></router-view>
       </el-main>
     </el-container>

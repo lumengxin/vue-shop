@@ -42,7 +42,7 @@ Vue.component('tree-table', TreeTable)
 Vue.use(VueQuillEditor)
 
 // 构造全局时间过滤器
-Vue.filter('dataFormat', function(originVal) {
+Vue.filter('dataFormat', function (originVal) {
   const dt = new Date(originVal)
   const y = dt.getFullYear()
   // 月份从0开始，不足两位时补0

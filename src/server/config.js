@@ -14,3 +14,7 @@ if (window.location.href.indexOf('http://124.34.32.42:8888/') > -1) {
 }
 
 export default config
+
+/* export const baseURL = process.env.NODE_ENV === 'production'
+? 'http://production.com'
+: 'http://localhost:3000' */

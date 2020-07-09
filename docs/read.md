@@ -108,6 +108,10 @@ vue ui;
 
   <img src=".\images\postman.png" alt="postman" />
 
+##### 4.1启动后台服务
+
+- 打开phpStudy软件，启动MySQL数据库(如果失败，关闭掉本地的MySql服务)
+- 进入vue_api_server项目，执行 node app.js; 启动服务
 
 
 ### 项目开发
@@ -266,3 +270,11 @@ https.createServer(options, app).listen(443)
   - 查看运行项目：pm2 ls
   - 停止：pm2 stop 自定义名称（或者 id）
   - 删除：pm2 delete 自定义名称
+
+<em>pm2启动vue项目：</em>(进入到vue项目根目录)
+
+```
+1. pm2 start build/dev-server.js <--name xxx>; // xxx自定义名称
+2. pm2 start npm -- run dev; 
+```
+
